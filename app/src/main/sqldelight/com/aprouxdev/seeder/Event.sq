@@ -1,0 +1,8 @@
+import kotlin.collections.List;
+
+CREATE TABLE Event (
+    id TEXT NOT NULL UNIQUE PRIMARY KEY,
+    coupleId TEXT NOT NULL,
+    countDownId TEXT NOT NULL,
+    addOnList TEXT AS List<String>
+);

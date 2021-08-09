@@ -1,0 +1,20 @@
+import com.aprouxdev.seeder.services.UserState;
+import kotlin.collections.List;
+
+
+
+CREATE TABLE User (
+    id TEXT NOT NULL UNIQUE PRIMARY KEY,
+    name TEXT NOT NULL,
+    couples TEXT AS List<String>,
+    userState TEXT AS UserState
+);
+
+selectMe:
+SELECT * FROM User;
+
+insertOrReplace:
+INSERT OR REPLACE INTO User VALUES ?;
+
+deleteAll:
+DELETE FROM User;

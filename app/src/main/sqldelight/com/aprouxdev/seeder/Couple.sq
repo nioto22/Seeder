@@ -1,0 +1,8 @@
+import com.aprouxdev.seeder.services.CoupleState;
+import kotlin.collections.List;
+
+CREATE TABLE Couple (
+    id TEXT NOT NULL UNIQUE PRIMARY KEY,
+    events TEXT AS List<String>,
+    coupleState TEXT AS CoupleState
+);

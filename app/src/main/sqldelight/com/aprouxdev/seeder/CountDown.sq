@@ -1,0 +1,8 @@
+import com.aprouxdev.seeder.services.CountDownState;
+
+CREATE TABLE CountDown (
+    id TEXT NOT NULL UNIQUE PRIMARY KEY,
+    startTime INTEGER,
+    endTime INTEGER,
+    cdState TEXT AS CountDownState
+);

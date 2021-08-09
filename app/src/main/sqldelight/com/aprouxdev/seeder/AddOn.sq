@@ -1,0 +1,31 @@
+import com.aprouxdev.seeder.services.AddOnState;
+import com.aprouxdev.seeder.services.AddOnType;
+
+CREATE TABLE AddOn (
+       id TEXT NOT NULL UNIQUE PRIMARY KEY,
+       ownerId TEXT NOT NULL,
+       addOnState TEXT AS AddOnState,
+       addOnType TEXT AS AddOnType
+);
+
+getAllAddOnForUser:
+SELECT * FROM AddOn WHERE ownerId = ?;
+
+getAllAddOnType:
+SELECT * FROM AddOn WHERE addOnType = ?;
+
+insertOrReplace:
+INSERT OR REPLACE INTO AddOn VALUES ?;
+
+insert:
+INSERT INTO AddOn VALUES ?;
+
+deleteAll:
+DELETE FROM AddOn;
+
+deleteAddOn:
+DELETE FROM AddOn WHERE id = ?;
+
+deleteAllAddOnState:
+DELETE FROM AddOn WHERE addOnState = ?;
+
